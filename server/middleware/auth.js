@@ -1,5 +1,5 @@
 let {User} = require('./../models/user');
-
+const boom = require('boom');
 let authenticate = (req, res, next) => {
   const token = req.header('x-auth');
 
@@ -12,7 +12,7 @@ let authenticate = (req, res, next) => {
     req.token = token;
     next();
   }).catch((e) => {
-    res.status(401).send();
+    res.json(boom.unauthorized(e));
   });
 };
 

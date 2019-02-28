@@ -1,10 +1,10 @@
 let mongoose = require('mongoose');
 
 let Todo = mongoose.model('Todo', {
-  text: {
+  task: {
     type: String,
     required: true,
-    minlength: 1,
+    minlength: 2,
     trim: true
   },
   done: {
