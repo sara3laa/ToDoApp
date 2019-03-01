@@ -29,6 +29,12 @@ async function logoutUser(req,res){
       }
 }
 
-exports.registerUser = registerUser
-exports.loginUser = loginUser
-exports.logoutUser = logoutUser
+// exports.registerUser = registerUser
+// exports.loginUser = loginUser
+// exports.logoutUser = logoutUser
+
+module.exports = {
+  registerUser,
+  loginUser,
+  logoutUser
+}

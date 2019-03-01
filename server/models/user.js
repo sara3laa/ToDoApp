@@ -36,7 +36,7 @@ let UserSchema = new mongoose.Schema({
       }]
 
 })
-serSchema.methods.toJSON = function () {
+UserSchema.methods.toJSON = function () {
     let user = this;
     let userObject = user.toObject();
   

@@ -1,6 +1,8 @@
 const todos  = require('../controllers/todos')
 const express = require('express')
-const router = express.Router()
+
+const asyncRouter = require('macropress-router')
+const router = new asyncRouter()
 const authenticate = require('../middleware/auth')
 
 

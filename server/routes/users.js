@@ -1,11 +1,12 @@
 const users = require('../controllers/users')
 const express = require('express')
-const router = express.Router()
+const asyncRouter = require('macropress-router')
+const router = new asyncRouter()
 const authenticate = require('../middleware/auth')
 
-
-router.post('/users',authenticate,users.registerUser)
-router.get('/users/me',authenticate,users.loginUser)
-router.delete('/users/me/logout',authenticate,users.logoutUser)
+console.log('***********', users)
+router.post('/',authenticate,users.registerUser)
+router.get('/me',authenticate,users.loginUser)
+router.delete('/me/logout',authenticate,users.logoutUser)
 
 module.exports = router
