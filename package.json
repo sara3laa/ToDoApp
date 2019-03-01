@@ -17,6 +17,7 @@
     "joi": "^14.3.1",
     "jsonwebtoken": "^8.5.0",
     "lodash": "^4.17.11",
+    "macropress-router": "^1.0.1",
     "mongodb": "^3.1.13",
     "mongoose": "^5.4.16",
     "validator": "^10.11.0"
